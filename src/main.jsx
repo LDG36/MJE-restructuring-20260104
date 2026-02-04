@@ -7,9 +7,9 @@ import { Routes, Route } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
+  // <StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </StrictMode>,
+  // </StrictMode>,
 )
