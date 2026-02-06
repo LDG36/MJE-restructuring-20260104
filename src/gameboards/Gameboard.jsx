@@ -11,9 +11,11 @@ const Gameboard = (props) => {
     const navigate = useNavigate();
     const {state} = useLocation();
     //const {originalLevel, levelcounter2} = state;
-    const originalLevel = state?.originalLevel
-    const levelcounter2 = state?.levelcounter2
-
+    
+    //---------------------------------------------------------------nextboard level control
+    // const originalLevel = state?.originalLevel
+    // const levelcounter2 = state?.levelcounter2
+    //---------------------------------------------------------------
     
     const bottomRef = useRef(null);
     useEffect(() => {
@@ -27,12 +29,18 @@ const Gameboard = (props) => {
     //   setLevelcounter(originalLevel ?? levelcounter2 ?? 1);
     // }, [originalLevel, levelcounter2])
     // //----------------
-    const levelcounter = originalLevel ?? levelcounter2 ?? 0;
+
+    //---------------------------------------------------------------nextboard level control
+    //const levelcounter = originalLevel ?? levelcounter2 ?? 0;
+    //---------------------------------------------------------------old
     //const levelcounter = props.levelcounter3 ? 0 : (originalLevel ?? levelcounter2 ?? props.levelcounter3 ?? 0);
+    //---------------------------------------------------------------
 
     //measuring amount of levels //old before I changed obj of items to array of arrays
     // const levelKeys = Object.keys(levelsData);
     // const totalLevels = levelKeys.length;
+
+    const levelcounter = props.levelcounter3;
 
     const totalLevels = levelsData.length;
 
@@ -144,7 +152,8 @@ const Gameboard = (props) => {
     
                   //important code - level finish
                   if (items.every(item => item.stat.includes("vanish"))) {
-                  navigate('/nextboard', {state: {moves, time, levelcounter} });
+                  //navigate('/nextboard', {state: {moves, time, levelcounter} });
+                  navigate('/nextboard', {state: {moves, time} });
                   stopTimer();
                   resetTimer();
                   }

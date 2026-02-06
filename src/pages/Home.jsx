@@ -1,7 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import {useLocation} from "react-router-dom"
+import { useState , useEffect} from 'react';
+import { useNavigate } from "react-router-dom";
 
-const Home = () => {
+const Home = ({ levelcounter3, setLevelcounter3 }) => {
+
+    const navigate = useNavigate();
+    const {state} = useLocation();
+
   return (
     <>
     <article className="settingsContainer" >
@@ -32,11 +39,11 @@ const Home = () => {
                 for visiting this site and have fun.
             </p> */}
         </div>
-        <Link to='/gameboard'>
-            <button className="startBtn">
+        {/* <Link to='/gameboard'> */}
+            <button className="startBtn" onClick={() => {setLevelcounter3(0); navigate('/gameboard') }}>
                 Start
             </button>
-        </Link>
+        {/* </Link> */}
     </article>
     </>
   )

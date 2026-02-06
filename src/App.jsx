@@ -48,7 +48,7 @@ function App() {
     <Header />
     <div className="container">
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home  levelcounter3={levelcounter3} setLevelcounter3={setLevelcounter3} />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/funfacts" element={<FunFacts />} />
         {/* <Route path="/game" element={<Game />} /> */}
@@ -64,7 +64,7 @@ function App() {
         <Route path="/playactions" element={<PlayActions />} /> */}
 
         <Route path="/gameboard" element={<Gameboard levelcounter3={levelcounter3} setLevelcounter3={setLevelcounter3}/>} />
-        <Route path="/nextboard" element={<Nextboard />} />
+        <Route path="/nextboard" element={<Nextboard levelcounter3={levelcounter3} setLevelcounter3={setLevelcounter3} />} />
 
         {/* <Route path="/next1" element={<Next1 />} />
         <Route path="/next2" element={<Next2 />} />
@@ -73,7 +73,7 @@ function App() {
         <Route path="/next5" element={<Next5 />} />
         <Route path="/next6" element={<Next6 />} /> */}
 
-        <Route path="/finish" element={<Finish />} />
+        <Route path="/finish" element={<Finish levelcounter3={levelcounter3} setLevelcounter3={setLevelcounter3} />} />
       </Routes>
     </div>
     <Footer />

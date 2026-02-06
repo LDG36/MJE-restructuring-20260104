@@ -4,7 +4,7 @@ import {useLocation} from "react-router-dom"
 import { useState , useEffect} from 'react';
 import { useNavigate } from "react-router-dom";
 
-const Finish = () => {
+const Finish = ({ levelcounter3, setLevelcounter3 }) => {
 
     const navigate = useNavigate();
     const {state} = useLocation();
@@ -36,11 +36,11 @@ const Finish = () => {
     
     <div className="settingsContainer">
 
-      <Link to="/">
-      <button className="backToStartBtn">
+      {/* <Link to="/"> */}
+      <button className="backToStartBtn"  onClick={() => {setLevelcounter3(0); navigate('/') }}>
         Completed - Back to Start
       </button>
-      </Link>
+      {/* </Link> */}
 
       {/* This does not work at the moment because game flow is from /nextboard to /finish
        - not from /gameboard to /finish ! */}

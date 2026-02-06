@@ -31,7 +31,7 @@ const About = ({ levelcounter3, setLevelcounter3 }) => {
               Netlify is a fee hosting provider for front-end websites.
             </p>
         </div>
-        {/* <div className="stylingQuickAccess">
+        <div className="stylingQuickAccess">
           <h1 className="landingHeader">Quick Access</h1>
           <div className="quickBtn">
             
@@ -64,7 +64,7 @@ const About = ({ levelcounter3, setLevelcounter3 }) => {
                 </button>
             
           </div>
-        </div> */}
+        </div>
     </article>
     </>
   )

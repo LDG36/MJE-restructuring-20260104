@@ -7,18 +7,21 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const Nextboard = () => {
+const Nextboard = ({ levelcounter3, setLevelcounter3 }) => {
 
     const navigate = useNavigate();
     const {state} = useLocation();
-    const {moves, time, levelcounter} = state;
-    const originalLevel = state?.levelcounter;
-    const [levelcounter2, setLevelcounter2] = useState(originalLevel);
+    //const {moves, time, levelcounter} = state;
+    //---------------------------------------------------------------nextboard level control - two const one for repeat and one for next gameboard
+    // const originalLevel = state?.levelcounter;
+    // const [levelcounter2, setLevelcounter2] = useState(originalLevel);
+    //---------------------------------------------------------------
 
-    useEffect(() => {
-      setLevelcounter2(prev => prev + 1);
-      // setLevelcounter2(levelcounter2 => levelcounter2 + 1)
-    }, [])
+    //---------------------------------------------------------------nextboard level control
+    // useEffect(() => {
+    //   setLevelcounter2(prev => prev + 1);
+    //   // setLevelcounter2(levelcounter2 => levelcounter2 + 1)
+    // }, [])
 
 
     const formatTime = (ms) => 
@@ -41,7 +44,7 @@ const Nextboard = () => {
     <div className="settingsContainer">
 
       {/* <Link to="/gameboard"> */}
-      <button className="backToStartBtn" onClick={() => {navigate('/gameboard', {state: {originalLevel}}) }}>
+      <button className="backToStartBtn" onClick={() => {setLevelcounter3(levelcounter3); navigate('/gameboard') }}>
       {/* <button className="backToStartBtn"> */}
         Repeat
       </button>
@@ -50,7 +53,7 @@ const Nextboard = () => {
       {/* <Link to="/playmoods"> */}
       {/* <button className="startBtn2" OnClick={() => {navigate('/gameboard', {state: {level: level + 1}})}}> */}
       
-      <button className="startBtn2" onClick={() => {navigate('/gameboard', {state: {levelcounter2 }}) }}>
+      <button className="startBtn2" onClick={() => {setLevelcounter3(prev => prev + 1); navigate('/gameboard') }}>
       {/* <button className="startBtn2"> */}
         Play Next
       </button>
