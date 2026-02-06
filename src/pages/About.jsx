@@ -1,7 +1,14 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { useNavigate, useLocation } from 'react-router-dom';
 
-const About = () => {
+const About = ({ levelcounter3, setLevelcounter3 }) => {
+
+    const navigate = useNavigate();
+    const {state} = useLocation();
+    // const [levelcounter, setLevelcounter] = useState(1);
+
   return (
     <>
     <article className="settingsContainer" >
@@ -24,46 +31,40 @@ const About = () => {
               Netlify is a fee hosting provider for front-end websites.
             </p>
         </div>
-        <div className="stylingQuickAccess">
+        {/* <div className="stylingQuickAccess">
           <h1 className="landingHeader">Quick Access</h1>
           <div className="quickBtn">
-            <Link to='/playfruits'>
-                <button className="startBtn">
+            
+                <button className="startBtn" onClick={() => {setLevelcounter3(0); navigate('/gameboard');}}>
                     The Fruits
                 </button>
-            </Link>
-            <Link to='/playmoods'>
-                <button className="startBtn">
-                    The Moods
-                </button>
-            </Link>
-            <Link to='/playvegetables'>
-                <button className="startBtn">
+           
+                <button className="startBtn"  onClick={() => {setLevelcounter3(1); navigate('/gameboard');}}>
                     The Vegetables
                 </button>
-            </Link>
-            <Link to='/playtransport'>
-                <button className="startBtn">
-                    The Transport
-                </button>
-            </Link>
-            <Link to='/playnumbers'>
-                <button className="startBtn">
-                    The Numbers
-                </button>
-            </Link>
-            <Link to='/playhomeware'>
-                <button className="startBtn">
-                    The Homeware
-                </button>
-            </Link>
-            <Link to='/playactions'>
-                <button className="startBtn">
+            
+                <button className="startBtn"  onClick={() => {setLevelcounter3(2); navigate('/gameboard');}}>
                     The Actions
                 </button>
-            </Link>
+            
+                <button className="startBtn"   onClick={() => {setLevelcounter3(3); navigate('/gameboard');}}>
+                    The Homeware
+                </button>
+            
+                <button className="startBtn"  onClick={() => {setLevelcounter3(4); navigate('/gameboard');}}>
+                    The Moods
+                </button>
+            
+                <button className="startBtn"  onClick={() => {setLevelcounter3(5); navigate('/gameboard');}}>
+                    The Numbers
+                </button>
+            
+                <button className="startBtn"  onClick={() => {setLevelcounter3(6); navigate('/gameboard');}}>
+                    The Transport
+                </button>
+            
           </div>
-        </div>
+        </div> */}
     </article>
     </>
   )

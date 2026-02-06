@@ -5,7 +5,8 @@ import { useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import levelsData from "../data/levels.json";
 
-const Gameboard = () => {
+//const Gameboard = ({ levelcounter, setLevelcounter }) => {
+const Gameboard = (props) => {
 
     const navigate = useNavigate();
     const {state} = useLocation();
@@ -26,8 +27,14 @@ const Gameboard = () => {
     //   setLevelcounter(originalLevel ?? levelcounter2 ?? 1);
     // }, [originalLevel, levelcounter2])
     // //----------------
-    const levelcounter = originalLevel ?? levelcounter2 ?? 1;
+    const levelcounter = originalLevel ?? levelcounter2 ?? 0;
+    //const levelcounter = props.levelcounter3 ? 0 : (originalLevel ?? levelcounter2 ?? props.levelcounter3 ?? 0);
 
+    //measuring amount of levels //old before I changed obj of items to array of arrays
+    // const levelKeys = Object.keys(levelsData);
+    // const totalLevels = levelKeys.length;
+
+    const totalLevels = levelsData.length;
 
     //important code - generating a level from .json and shuffling
     //ORIGINAL - before adding useEffect for Repeat button!
@@ -36,20 +43,28 @@ const Gameboard = () => {
     // levelsData[`level_${levelcounter}`].sort(() => Math.random() - 0.5));
     //------
 
+    
+
     //important code - generating a level from .json and shuffling
     //UPGRADED with: Loading fresh from .json at each start of the level thanks to useEffect
     const [items, setItems] = useState([]);
     useEffect(() => {
-      const freshItems = levelsData[`level_${levelcounter}`]
+
+      //this code navigates from /nextboard to /finish
+      //ideally it should navigate from last (7th) /gameboard to /finish (but can stay like this for now)
+      if (levelcounter >= totalLevels) {
+      navigate("/finish", {state: {moves, time}});
+      return;
+      }
+        
+      //old before .json object turned into an array
+      //const freshItems = levelsData[`level_${levelcounter}`]
+      const freshItems = levelsData[levelcounter]
         .map(item => ({ ...item })) // clone objects - recomended by Copilot
         .sort(() => Math.random() - 0.5); // shuffle
       setItems(freshItems);
-    }, [levelcounter]);
+    }, [levelcounter, totalLevels, navigate]);
 
-    //important check - why my "vanish" classes gets overridden (not needed anymore)
-    useEffect(() => {
-      console.log("items UPDATED:", items);
-    }, [items]);
 
           function vanishCheck(id)
           {

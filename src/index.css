@@ -453,3 +453,9 @@ ABOVE - styling game area - copied from separte project - LDG - 20251013
 
 }
 
+
+.redFont{
+  color:red;
+  font-weight: 900;
+  font-size: 28px;
+}

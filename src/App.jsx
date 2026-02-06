@@ -38,6 +38,11 @@ import Finish from './gameboards/Finish';
 function App() {
   // const [count, setCount] = useState(0);
   
+
+  //added on 20260205 for About.jsx Quick Access
+  const [levelcounter3, setLevelcounter3] = useState(0);
+
+  
   return (
     <>
     <Header />
@@ -47,7 +52,7 @@ function App() {
         <Route path="/settings" element={<Settings />} />
         <Route path="/funfacts" element={<FunFacts />} />
         {/* <Route path="/game" element={<Game />} /> */}
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<About levelcounter3={levelcounter3} setLevelcounter3={setLevelcounter3}/>} />
 
         {/* <Route path="/playfruits" element={<PlayFruits />} /> */}
         {/* <Route path="/playfruits2" element={<PlayFruits2 />} /> */}
@@ -58,7 +63,7 @@ function App() {
         <Route path="/playhomeware" element={<PlayHomeware />} />
         <Route path="/playactions" element={<PlayActions />} /> */}
 
-        <Route path="/gameboard" element={<Gameboard />} />
+        <Route path="/gameboard" element={<Gameboard levelcounter3={levelcounter3} setLevelcounter3={setLevelcounter3}/>} />
         <Route path="/nextboard" element={<Nextboard />} />
 
         {/* <Route path="/next1" element={<Next1 />} />

@@ -1,5 +1,5 @@
-{
-  "level_1": [
+[
+  [
 
     {"id":1, "text":"jabłko", "icon":"🍎", "stat": "", "sound":"jablko.mp3", "lang":"PL" },
     {"id":1, "text":"an apple", "icon":"🍎", "stat": "", "sound":"apple.mp3", "lang":"EN" },
@@ -33,7 +33,7 @@
 
   ],
 
-  "level_2": [
+  [
 
         {"id":1, "text":"marchewka", "icon":"🥕", "stat": "" },
         {"id":1, "text":"a carrot", "icon":"🥕", "stat": "" },
@@ -67,7 +67,7 @@
 
   ],
 
-    "level_3": [
+  [
 
           {"id":1, "text":"biec", "icon":"🏃‍♂️", "stat": "", "sound":".mp3" },
           {"id":1, "text":"to run", "icon":"🏃‍♂️", "stat": "", "sound":".mp3" },
@@ -101,7 +101,7 @@
 
   ],
 
-    "level_4": [
+  [
 
           {"id":1, "text":"krzesło", "icon":"🪑", "stat": "", "sound":".mp3" },
           {"id":1, "text":"a chair", "icon":"🪑", "stat": "", "sound":".mp3" },
@@ -135,7 +135,7 @@
 
   ],
 
-    "level_5": [
+  [
 
         {"id":1, "text":"smutny", "icon":"😢", "stat": "" },
         {"id":1, "text":"sad", "icon":"😢", "stat": "" },
@@ -169,7 +169,7 @@
 
   ],
 
-    "level_6": [
+  [
 
           {"id":1, "text":"jeden", "icon":"1️", "stat": "", "sound":".mp3" },
           {"id":1, "text":"one", "icon":"1️", "stat": "", "sound":".mp3" },
@@ -203,7 +203,7 @@
 
   ],
 
-    "level_7": [
+  [
 
           {"id":1, "text":"samochód", "icon":"🚗", "stat": "", "sound":".mp3" },
           {"id":1, "text":"a car", "icon":"🚗", "stat": "", "sound":".mp3" },
@@ -237,6 +237,6 @@
 
   ]
 
-}
+]
 
       
