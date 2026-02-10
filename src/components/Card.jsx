@@ -15,10 +15,10 @@ function Card({item, id, handleClick, disabled}){
         }
         else if(lang=='ES')
         {
-            utterance.lang = "en-ES";
+            utterance.lang = "es-ES";
         }
         else{
-            utterance.lang = "es-US";
+            utterance.lang = "en-US";
         }
          // or "pl-PL", "en-GB", etc.
         speechSynthesis.speak(utterance);

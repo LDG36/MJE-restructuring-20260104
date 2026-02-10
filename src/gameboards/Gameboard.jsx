@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Card from '../components/Card'
 import { useRef, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import levelsData from "../data/levels.json";
+import levelsData from "../data/levels2.json";
 
 //const Gameboard = ({ levelcounter, setLevelcounter }) => {
 const Gameboard = (props) => {

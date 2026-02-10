@@ -21,7 +21,7 @@ const Home = ({ levelcounter3, setLevelcounter3 }) => {
                 This is another example of MJE web app by Lukasz Galik. 
                 This instance proves that it is possible to fix some 
                 logical errors related to the game mechanics. This 
-                solution is being addapted as part of a Portfolio.
+                solution is being addapted as part of a Portfolio. Recomended browser - Google Chrome.
                 {/*                 
                 It also 
                 adjust this piece of software to mobile view.
